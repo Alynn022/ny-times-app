@@ -1,10 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import { MyContext } from '../Context/context';
 import getData from '../apiCalls';
+import { Link } from 'react-router-dom';
 
 const Articles = () => {
   const { articles, setArticles } = useContext(MyContext)
   const { setError } = useContext(MyContext)
+  const { setCurrentArticle } = useContext(MyContext)
 
   useEffect(() => {
     getData()
@@ -19,17 +21,25 @@ const Articles = () => {
     }
   }) 
   
-  }, [])
+  }, [setArticles, setError])
 
-  console.log(articles)
-
+  
   const renderTitle = () => {
     if (articles && articles.results && articles.results.length > 0) {
       return articles.results.map((i) => 
-      <section key={i + '-' + i.title}>
-        <p>{i.title}</p>
-      </section>)
+      <Link to={`/${i + '-' + i.title}`} key={i.short_url}>
+        <section key={i + '-' + i.title} id={i.short_url} onClick={() => getCurrentArticle(i.short_url)}>
+          <p>{i.title}</p>
+        </section>
+      </Link>)
     }
+  }
+  
+  const getCurrentArticle = (id) => {
+    const getArticle = articles.results.find(article => {
+      return id === article.short_url
+    })
+    setCurrentArticle(getArticle)
   }
 
   return(

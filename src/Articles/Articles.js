@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { MyContext } from '../Context/context';
 import getData from '../apiCalls';
 import { Link } from 'react-router-dom';
+import SortFeature from '../SortFeature/SortFeature';
 
 const Articles = () => {
   const { articles, setArticles } = useContext(MyContext)
@@ -11,7 +12,7 @@ const Articles = () => {
   useEffect(() => {
     getData()
     .then(data => {
-      setArticles(data)
+      setArticles(data.results)
     })
     .catch((response) => {
       if (response.status < 500) {
@@ -23,20 +24,21 @@ const Articles = () => {
   
   }, [setArticles, setError])
 
-  
+  console.log(articles)
+
   const renderTitle = () => {
-    if (articles && articles.results && articles.results.length > 0) {
-      return articles.results.map((i) => 
-      <Link to={`/${i + '-' + i.title}`} key={i.short_url}>
-        <section key={i + '-' + i.title} id={i.short_url} onClick={() => getCurrentArticle(i.short_url)}>
-          <p>{i.title}</p>
+    if (articles && articles.length > 0) {
+      return articles.map((elem, i) => 
+      <Link to={`/key/${i + '-' + elem.title}`} key={elem.short_url}>
+        <section id={elem.short_url} onClick={() => getCurrentArticle(elem.short_url)}>
+          <p>{elem.title}</p>
         </section>
       </Link>)
     }
   }
   
   const getCurrentArticle = (id) => {
-    const getArticle = articles.results.find(article => {
+    const getArticle = articles.find(article => {
       return id === article.short_url
     })
     setCurrentArticle(getArticle)
@@ -44,7 +46,8 @@ const Articles = () => {
 
   return(
     <>
-    {renderTitle()}
+      <SortFeature/>
+      {renderTitle()}
     </>
   )
 }

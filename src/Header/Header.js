@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
   return (
     <header>
-      <p>Nav goes here</p>
+      <h1>Top Stories from The New York Times</h1>
     </header>
   )
 }

@@ -1,11 +1,13 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import Header from '../Header/Header';
 
-const App= () => {
+const App = () => {
   return (
     <main>
+      <Header/>
       <Routes>
-        <Route path='/'/>
+        <Route path='/' />
       </Routes>
     </main>
   )

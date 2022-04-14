@@ -24,7 +24,6 @@ const Articles = () => {
   
   }, [setArticles, setError])
 
-  console.log(articles)
 
   const renderTitle = () => {
     if (articles && articles.length > 0) {

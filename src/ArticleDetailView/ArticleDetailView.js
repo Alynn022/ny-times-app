@@ -22,7 +22,7 @@ const ArticleDetailView = () => {
       </Link> 
       {displayMedia()}
       <h2>{currentArticle.title}</h2>
-      <p>{currentArticle.abstract}</p>
+      <p className='abstract'>{currentArticle.abstract}</p>
       <p> To read more: <a href={currentArticle.url} target="_blank" rel="noreferrer">click here</a></p>
     </section>
   )

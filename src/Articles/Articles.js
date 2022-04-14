@@ -46,6 +46,7 @@ const Articles = () => {
   return(
     <section className='articles-container'>
       <SortFeature/>
+      <h3>Top Articles:</h3>
       {renderTitle()}
     </section>
   )

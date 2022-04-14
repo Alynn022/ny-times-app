@@ -3,7 +3,6 @@
 ## Table of Contents
 - [Overview](#overview)
 - [Deployed Site](#deployed-site)
-- [Screenshots](#screenshots)
 - [Future Enhancements](#future-enhancements)
 - [Install & Setup](#install-and-setup)
 - [Project Spec & Rubric](#project-spec-and-rubric)
@@ -14,31 +13,10 @@
 This was a solo project using React to build an application for single users. This application utilizes the New York Times API to pull the day's top stories. User is able to view a list of top stories and click on individual stories for more details. 
 
 ## Deployed site
+https://ny-times-mod4-app.herokuapp.com/
 
 ## Api endpoint 
 `https://api.nytimes.com/svc/topstories/v2/home.json?key={secretkey}`
-
-## Screenshots 
-
-Home Page View 
-
-![home-view]()
-
-A user is able to click on a article for more details.
-
-![view-details]()
-
-A user is able to click home to go back to the main page.
-
-![home-button]()
-
-A user is able to click on a tab and view a filtered list of articles. 
-![filter-tabs]()
-
-
-Application has responsive layout for mobile view or browser view. 
-
-![responsive-layout](https://media.giphy.com/media/q0Z71R2sOcY6jSlFXl/giphy.gif)
 
 ## Future Enhancements
 - Add css for better UI 

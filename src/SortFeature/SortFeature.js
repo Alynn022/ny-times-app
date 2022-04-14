@@ -27,7 +27,10 @@ const SortFeature = () => {
   
   return(
     <section className='tabs-container'>
-     {getTabs()}
+      <h3>Tabs to filter stories by:</h3>
+      <article className='all-tabs'>
+        {getTabs()}
+      </article> 
     </section>
   )
 }

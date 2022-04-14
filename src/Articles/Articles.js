@@ -24,14 +24,13 @@ const Articles = () => {
   
   }, [setArticles, setError])
 
-  console.log(articles)
 
   const renderTitle = () => {
     if (articles && articles.length > 0) {
       return articles.map((elem, i) => 
       <Link to={`/key/${i + '-' + elem.title}`} key={elem.short_url}>
-        <section id={elem.short_url} onClick={() => getCurrentArticle(elem.short_url)}>
-          <p>{elem.title}</p>
+        <section className={i} id={elem.short_url} onClick={() => getCurrentArticle(elem.short_url)}>
+          <p className='article-title'>{elem.title}</p>
         </section>
       </Link>)
     }
@@ -45,10 +44,10 @@ const Articles = () => {
   }
 
   return(
-    <>
+    <section className='articles-container'>
       <SortFeature/>
       {renderTitle()}
-    </>
+    </section>
   )
 }
 

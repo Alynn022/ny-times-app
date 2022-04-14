@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { MyContext } from '../Context/context';
+import './ArticleDetailView.css';
+import { Link } from 'react-router-dom';
 
 const ArticleDetailView = () => {
   const { currentArticle } = useContext(MyContext)
@@ -9,18 +11,19 @@ const ArticleDetailView = () => {
       return image.width === 600
     })
       return (
-        <img src={currentImage.url} key={currentImage.url} alt={currentImage.caption}/>
+        <img className='detail-image' src={currentImage.url} key={currentImage.url} alt={currentImage.caption}/>
       )
     }
-  
-  console.log(currentArticle)
 
   return (
-    <section>
+    <section className='detail-view'>
+       <Link to='/'>
+        <button>Home</button>
+      </Link> 
       {displayMedia()}
       <h2>{currentArticle.title}</h2>
-      <p>{currentArticle.abstract}</p>
-      <p> To read more: <a href={currentArticle.url}>click here</a></p>
+      <p className='abstract'>{currentArticle.abstract}</p>
+      <p> To read more: <a href={currentArticle.url} target="_blank" rel="noreferrer">click here</a></p>
     </section>
   )
 }

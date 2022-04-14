@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { MyContext } from '../Context/context';
 import './SortFeature.css';
 import { Link } from 'react-router-dom';
+import FilteredView from '../FilteredView/FilteredView';
 
 
 const SortFeature = () => {
@@ -18,7 +19,7 @@ const SortFeature = () => {
     })
       return tabs.map((tab, i) =>
       <Link to={`/tab/${tab}`} key={i + tab}>
-        <p>| {tab} | </p>
+        <p className='tabs'>| {tab} | </p>
       </Link>  
       )
     }

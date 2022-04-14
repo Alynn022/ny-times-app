@@ -2,12 +2,9 @@ import React, { useContext } from 'react';
 import { MyContext } from '../Context/context';
 import './SortFeature.css';
 import { Link } from 'react-router-dom';
-import FilteredView from '../FilteredView/FilteredView';
-
 
 const SortFeature = () => {
   const { articles } = useContext(MyContext)
-
   let tabs = []
 
   const getTabs = () => {
@@ -34,6 +31,5 @@ const SortFeature = () => {
     </section>
   )
 }
-
 
 export default SortFeature;

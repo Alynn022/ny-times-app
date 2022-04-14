@@ -16,7 +16,7 @@ This was a solo project using React to build an application for single users. Th
 https://ny-times-mod4-app.herokuapp.com/
 
 ## Api endpoint 
-`https://api.nytimes.com/svc/topstories/v2/home.json?key={secretkey}`
+`https://api.nytimes.com/svc/topstories/v2/home.json?key=<secretkey>`
 
 ## Future Enhancements
 - Add css for better UI 

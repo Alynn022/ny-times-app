@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { MyContext } from '../Context/context';
-import './ArticleDetailView.css';
 import { Link } from 'react-router-dom';
+import './ArticleDetailView.css';
 
 const ArticleDetailView = () => {
   const { currentArticle } = useContext(MyContext)

@@ -1,0 +1,68 @@
+{
+  "status":"OK",
+  "copyright":"Copyright (c) 2022 The New York Times Company. All Rights Reserved.",
+  "section":"home",
+  "last_updated":"2022-04-13T20:29:42-04:00",
+  "num_results":56,
+  "results":
+  [
+    {
+      "section":"world",
+      "subsection":"europe",
+      "title":"Despite Russian Warnings, Finland and Sweden Draw Closer to NATO",
+      "abstract":"The invasion of Ukraine has heightened security fears, pushing even formally nonaligned countries toward the Western alliance.",
+      "url":"https://www.nytimes.com/2022/04/13/world/europe/finland-sweden-nato-russia-ukraine.html",
+      "uri":"nyt://article/6512279d-e73b-5487-a80c-f4cd5f2718ef",
+      "byline":"By Steven Erlanger and Johanna Lemola",
+      "item_type":"Article",
+      "updated_date":"2022-04-13T15:06:46-04:00",
+      "created_date":"2022-04-13T12:07:47-04:00",
+      "published_date":"2022-04-13T12:07:47-04:00",
+      "material_type_facet":"",
+      "kicker":"",
+      "des_facet":
+      [
+        "United States International Relations",
+        "Politics and Government",
+        "War and Armed Conflicts",
+        "Polls and Public Opinion",
+        "Defense and Military Forces",
+        "Russian Invasion of Ukraine (2022)"
+      ],
+      "org_facet":
+      [
+        "European Union",
+        "North Atlantic Treaty Organization",
+        "Swedish Social Democratic Party"
+      ],
+      "per_facet":
+      [
+          "Andersson, Magdalena (1967- )",
+          "Marin, Sanna","Niinisto, Sauli"
+      ],
+      "geo_facet":
+      [
+          "Europe",
+          "Finland",
+          "Russia",
+          "Sweden",
+          "Ukraine"
+      ],
+      "multimedia":
+      [
+        {
+          "url":"https://static01.nyt.com/images/2022/04/13/world/13ukraine-finland-sweden-01/13ukraine-finland-sweden-01-threeByTwoSmallAt2X.jpg",
+          "format":"threeByTwoSmallAt2X",
+          "height":400,
+          "width":600,
+          "type":"image",
+          "subtype":"photo",
+          "caption":"Soldiers from the Finnish Defence Forces in front of a M270 Multiple Launch Rocket System, during a joint international military exercise in Setermoen, northern Norway, in March.",
+          "copyright":"Jonathan Nackstrand/Agence France-Presse — Getty Images"
+        }
+      ],
+      "short_url":"https://nyti.ms/3KHIewy"
+    }
+  ]
+}
+

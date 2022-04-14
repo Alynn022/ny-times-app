@@ -24,8 +24,8 @@ const FilteredView = () => {
     if (filteredArticles && filteredArticles.length > 0) {
     return filteredArticles.map((elem, i) => 
       <Link to={`/key/${i + '-' + elem.title}`} key={elem.short_url}>
-        <section id={elem.short_url} onClick={() => getCurrentArticle(elem.short_url)}>
-          <p>{elem.title}</p>
+        <section className={i} id={elem.short_url} onClick={() => getCurrentArticle(elem.short_url)}>
+          <p className='filtered-title'>{elem.title}</p>
         </section>
       </Link>)
     }
@@ -44,7 +44,7 @@ const FilteredView = () => {
       <Link to='/'>
         <button>Home</button>
       </Link> 
-      <p>Article results for: {getPathName[2]}</p>
+      <p className='article-result'>Article results for: {getPathName[2]}</p>
       {renderFilteredTitle()}
       <p>Press the back button to explore other articles</p>
     </section>

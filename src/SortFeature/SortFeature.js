@@ -19,7 +19,7 @@ const SortFeature = () => {
     })
       return tabs.map((tab, i) =>
       <Link to={`/tab/${tab}`} key={i + tab}>
-        <p>| {tab} | </p>
+        <p className='tabs'>| {tab} | </p>
       </Link>  
       )
     }

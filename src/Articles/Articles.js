@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import getData from '../apiCalls';
 import SortFeature from '../SortFeature/SortFeature';
 import Error from '../Error/Error';
+import './Articles.css';
 
 const Articles = () => {
   const { articles, setArticles } = useContext(MyContext)
@@ -28,7 +29,7 @@ const Articles = () => {
     if (articles && articles.length > 0) {
       return articles.map((elem, i) => 
         <Link to={`/key/${i + '-' + elem.title}`} key={elem.short_url}>
-          <section className={i} id={elem.short_url} onClick={() => getCurrentArticle(elem.short_url)}>
+          <section className={i} id={elem.short_url} onClick={() => getCurrentArticle(elem.short_url)} onKeyDown={() => getCurrentArticle(elem.short_url)}>
             <p className='article-title'>{elem.title}</p>
           </section>
         </Link>
@@ -47,10 +48,10 @@ const Articles = () => {
     <section className='articles-container'>
       <SortFeature/>
       {!error &&
-        <>
+        <section className='top-stories'>
           <h3>Top Articles:</h3>
           {renderTitle()}
-        </>  
+        </section>  
       }
       {error && <Error/>} 
     </section>

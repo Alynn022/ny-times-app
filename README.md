@@ -6,6 +6,7 @@
 - [Future Enhancements](#future-enhancements)
 - [Install & Setup](#install-and-setup)
 - [Project Spec & Rubric](#project-spec-and-rubric)
+- [Screenshots](#screenshots)
 - [Contributors](#contributors)
 - [Technologies](#technologies)
 
@@ -33,6 +34,12 @@ https://ny-times-mod4-app.herokuapp.com/
 
 ## Project Spec and Rubric
 [Turing School of Software & Design - Showcase Project Spec](https://mod4.turing.edu/projects/take_home/take_home_fe)
+
+## Screenshots
+
+100 on accessibility 
+
+![accessibility](https://user-images.githubusercontent.com/89872714/163588264-1b60d67c-28b7-4589-89ae-39fd9ae67d6d.png)
 
 ## Contributors 
 - [Lynn Nguyen](https://github.com/Alynn022)

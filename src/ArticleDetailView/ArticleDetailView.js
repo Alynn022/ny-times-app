@@ -17,7 +17,7 @@ const ArticleDetailView = () => {
 
   return (
     <section className='detail-view'>
-       <Link to='/'>
+      <Link to='/'>
         <button>Home</button>
       </Link> 
       {displayMedia()}

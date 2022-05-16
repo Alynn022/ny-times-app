@@ -5,7 +5,7 @@ import Articles from '../Articles/Articles';
 import ArticleDetailView from '../ArticleDetailView/ArticleDetailView';
 import FilteredView from '../FilteredView/FilteredView';
 import Error from '../Error/Error';
-
+import SearchView from '../SearchBar/SearchView';
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path='/' exact element={ <Articles/> } />
         <Route path='/tab/:key' exact element={ <FilteredView/> } />
+        <Route path='/search/:key' exact element={ <SearchView/> } />
         <Route path='/key/:key' exact element={ <ArticleDetailView/> } />
         <Route path='*' element={<Error/>}/>
       </Routes>

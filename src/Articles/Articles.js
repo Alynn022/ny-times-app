@@ -5,6 +5,7 @@ import getData from '../apiCalls';
 import SortFeature from '../SortFeature/SortFeature';
 import Error from '../Error/Error';
 import './Articles.css';
+import SearchBar from '../SearchBar/SearchBar';
 
 const Articles = () => {
   const { articles, setArticles } = useContext(MyContext)
@@ -46,6 +47,7 @@ const Articles = () => {
 
   return(
     <section className='articles-container'>
+      <SearchBar/>
       <SortFeature/>
       {!error &&
         <section className='top-stories'>
